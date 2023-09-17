@@ -15,23 +15,29 @@ import {
     }; 
    
     function minus(e) { 
-        // Add the code for the minus function 
+      e.preventDefault();
+      setResult((result) => result - Number(inputRef.current.value));
     };
    
     function times(e) { 
-      // Add the code for the plus function 
+      e.preventDefault();
+      setResult((result) => result * Number(inputRef.current.value));
     }; 
    
     function divide(e) { 
-      // Add the code for the divide function 
+      e.preventDefault();
+      setResult((result) => result / Number(inputRef.current.value));
     };
    
     function resetInput(e) { 
-      // Add the code for the resetInput function 
+      e.preventDefault();
+      inputRef.current.value = 0;
+      
     }; 
    
     function resetResult(e) { 
-        // Add the code for the resetResult function 
+      e.preventDefault();
+      setResult((result) => result = 0)
     }; 
    
     return ( 
@@ -42,6 +48,7 @@ import {
         <form> 
           <p ref={resultRef}> 
             {/* add the value of the current total */} 
+            <h2>Result: {result}</h2>
           </p> 
           <input
             pattern="[0-9]" 
@@ -49,12 +56,12 @@ import {
             type="number" 
             placeholder="Type a number" 
           /> 
-          <button onClick={plus}>add</button> 
-          {/* Add the subtract button */} 
-          {/* Add the multiply button */} 
-          {/* Add the divide button */} 
-          {/* Add the resetInput button */} 
-          {/* Add the resetResult button */} 
+          <button className = "btn plus" onClick={plus}>+</button> 
+          <button className = "btn minus" onClick={minus}>-</button>
+          <button className = "btn times" onClick={times}>x</button>
+          <button className = "btn divide" onClick={divide}>÷</button>
+          <button className = "btn resetInput" onClick={resetInput}>Reset Input</button>
+          <button className = "btn resetRutton" onClick={resetResult}>Reset Result</button>
         </form> 
       </div> 
     ); 

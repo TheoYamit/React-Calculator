@@ -1,0 +1,63 @@
+/* App.css */
+
+.App {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 100px auto;
+    max-width: 300px;
+    border: 2px solid #ccc;
+    padding: 20px;
+    padding-right: 33px;
+    background-color: #f9f9f9;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    padding-right: 0px;
+    margin-right:20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+.btn {
+    padding: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color:#a2bbcf;
+    border-color: grey;
+    border: solid;
+    border-width: 1px;
+}
+
+.btn:hover {
+    background-color:#b3cfe6;
+    cursor: pointer;
+}
+
+.btn:active {
+    background-color:#788b9a;
+}
+
+.plus {
+    margin-left: 20px;
+}
+
+.resetInput {
+    margin-left: 20px;
+}
+
